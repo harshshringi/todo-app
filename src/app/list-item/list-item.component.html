@@ -1,0 +1,7 @@
+<div class="list-item-container border" routerLink="/item/{{todo.id}}">
+  <span class='item-label label_{{todo.label}}'></span>
+  <div class='item-title'>
+    <a routerLink="/item/{{todo.id}}">{{todo.title}}</a>
+  </div>
+  <label class='item-content' *ngIf='todo.content.length > 0'>{{todo.content}}</label>
+</div>

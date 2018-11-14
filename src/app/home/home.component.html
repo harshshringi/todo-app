@@ -1,0 +1,24 @@
+<div id='main' class='container-fluid'>
+  <div class='row'>
+    <div id='create-item' class='border col-12 col-md-8'>
+        <form #createTodoForm="ngForm" id='createForm'>
+          <input type='text' [(ngModel)]='newTodo.title' required placeholder="Add mandatory title..." name='todoTitle'
+            #newTitle [pattern]='validationPattern' (blur)="newTitle.value=newTitle.value.trim()"/>
+          <textarea rows='2' [(ngModel)]='newTodo.content' placeholder="Add description..." name='todoContent'
+              #newContent (blur)="newContent.value=newContent.value.trim()" ></textarea>
+          <div id='label-selector'>
+            <div>
+              <label *ngFor='let label of (LabelNames | enumValues)' class='label_{{label}}'>
+                <input type="radio" name="toggle" value={{label}} [(ngModel)]='newTodo.label' required><span>{{label}}</span>
+              </label>
+            </div>
+          </div>
+          <button id="submit" type='button' (click)="createTodo()" [disabled]="!createTodoForm.form.valid">Create ✓</button>
+        </form>
+      </div>
+      
+      <div *ngFor="let todo of todos" class='col-12 col-md-4'>
+        <app-list-item [todo]="todo"></app-list-item>
+      </div>
+  </div>
+</div>

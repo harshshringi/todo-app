@@ -1,0 +1,62 @@
+@import './src/styles/common.scss';
+
+#create-item {
+    padding: 15px;
+}
+
+#label-selector {
+    label {
+        margin:auto 6px;
+        border-radius:4px;
+        overflow:auto;
+        cursor: pointer;
+
+        span {
+            text-align:center;
+            padding: 4px 8px;
+            display:block;
+        }
+
+        input {
+            position:absolute;
+            top:-20px;
+            visibility: hidden;
+        }
+    }
+
+    input:checked + span {
+        background-color:#404040;
+        color:#F7F7F7;
+    }
+
+    .label_blue {
+        background-color: $label_blue;
+    }
+    
+    .label_green {
+        background-color: $label_green;
+    }
+    .label_red {
+        background-color: $label_red;
+    }
+}
+
+input[type=text], textarea {
+    padding: 5px;
+    border-radius:5px;
+    width:100%;
+    margin-bottom: 1vw;
+}
+
+textarea[name=todoContent] {
+    resize: none;
+}
+
+#submit {
+    float: right;
+    border-radius:5px;
+}
+
+button:not(:disabled) {
+    cursor:pointer;
+}

@@ -1,0 +1,10 @@
+<div class='container border details-container'>
+  <div *ngIf='todo.title' class='details'>
+    <span class='item-label label_{{todo.label}}'></span>
+    <div class='item-title'>{{ todo.title }}</div>
+    <label class='item-content' *ngIf='todo.content.length > 0'>{{todo.content}}</label>
+  </div>
+  <div *ngIf='!todo.title'>
+    <label>No details found...</label>
+  </div>
+</div>

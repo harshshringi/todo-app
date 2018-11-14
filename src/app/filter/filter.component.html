@@ -1,0 +1,8 @@
+<div class='container-fluid'>
+  <div class='row'>
+    <div *ngFor="let todo of todos" class='col-12 col-md-4'>
+      <app-list-item [todo]="todo"></app-list-item>
+    </div>
+  </div>
+  <p *ngIf='todos.length == 0'>No items</p>
+</div>

@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { Labels } from './labels.enum';
+import { ViewEncapsulation } from '@angular/compiler/src/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo-app';
+
+  private currentUrl: string;
+  private LabelNames;
+
+  constructor(private router: Router) {
+    this.router.events
+    .subscribe((event: NavigationEnd) => {
+      if (event instanceof NavigationEnd) {
+        this.currentUrl = event.url;
+      }
+    });
+
+    this.LabelNames = Labels;
+  }
 }

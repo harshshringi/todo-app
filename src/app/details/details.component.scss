@@ -1,0 +1,22 @@
+@import './src/styles/common.scss';
+
+.details-container {
+    padding: 15px;
+    text-align: center;
+}
+
+.details {
+    position: relative;
+}
+
+.item-title {
+    font-weight: bold;
+    margin-bottom: 1.5vw;
+}
+
+.item-label {
+    width:30px;
+    height:30px;
+    position: absolute;
+    right:0;
+}
