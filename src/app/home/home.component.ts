@@ -10,9 +10,9 @@ import { Labels } from '../labels.enum';
 })
 export class HomeComponent implements OnInit {
 
-  private todos: Todo[] = [];
-  private newTodo: Todo;
-  private LabelNames;
+  todos: Todo[] = [];
+  newTodo: Todo;
+  LabelNames;
 
   constructor(private todoService: TodoService) {
     this.LabelNames = Labels;

@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs';
 })
 export class FilterComponent implements OnInit {
 
-  private todos: Todo[] = [];
+  todos: Todo[] = [];
   private label;
   private labelSubscription: Subscription;
 

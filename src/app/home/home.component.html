@@ -3,7 +3,7 @@
     <div id='create-item' class='border col-12 col-md-8'>
         <form #createTodoForm="ngForm" id='createForm'>
           <input type='text' [(ngModel)]='newTodo.title' required placeholder="Add mandatory title..." name='todoTitle'
-            #newTitle [pattern]='validationPattern' (blur)="newTitle.value=newTitle.value.trim()"/>
+            #newTitle (blur)="newTitle.value=newTitle.value.trim()"/>
           <textarea rows='2' [(ngModel)]='newTodo.content' placeholder="Add description..." name='todoContent'
               #newContent (blur)="newContent.value=newContent.value.trim()" ></textarea>
           <div id='label-selector'>

@@ -11,8 +11,8 @@ import { ViewEncapsulation } from '@angular/compiler/src/core';
 export class AppComponent {
   title = 'todo-app';
 
-  private currentUrl: string;
-  private LabelNames;
+  currentUrl: string;
+  LabelNames;
 
   constructor(private router: Router) {
     this.router.events

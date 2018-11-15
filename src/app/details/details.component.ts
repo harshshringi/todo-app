@@ -10,7 +10,7 @@ import { Todo } from '../todo.model';
 })
 export class DetailsComponent implements OnInit {
 
-  private todo: Todo = new Todo();
+  todo: Todo = new Todo();
   private id;
 
   constructor(private route: ActivatedRoute, private todoService: TodoService) {
